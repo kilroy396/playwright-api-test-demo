@@ -17,3 +17,6 @@ Thumbs.db
 
 # Warnings file
 warnings.log
+
+# pnpm lock files
+pnpm-lock.yaml 
