@@ -31,7 +31,7 @@ export async function getEndpointCoverage(endpoint: string) {
  */
 export async function fetchOpenApi(resource: string) {
   const requestContext = await request.newContext();
-  const response = await requestContext.get(`${baseURL}${resource}/v3/api-docs/${resource}-api`, { timeout: 5000 });
+  const response = await requestContext.get(`${baseURL}${resource}/v3/api-docs/${resource}-api`, { timeout: 15000 });
 
   const body = await response.json();
   writeFile(`./${resource}_spec3.json`, JSON.stringify(body, null, 2));
